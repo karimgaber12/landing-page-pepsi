@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>creative pepsi</title>
+</head>
+<body>
+    <section class="scr">
+        <div class="header">
+            <a href="#"><img src="img/logo.png"></a>
+            <img class="menu" src="img/menu.png" alt="">
+            <img class="close" src="img/close.png" alt="">
+
+            <ul class="main-ul">
+                <li><a href="#">home</a></li>
+                <li><a href="#">product</a></li>
+                <li><a href="#">whats new</a></li>
+                <li><a href="#">newsletter</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="contentbx">
+            <h1>thats what <br><span> ilike </span></h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's
+                 standard dummy text ever since the 1500s, when an unknown printe
+                 r took a galley of type and scrambled it to make a type specimen b
+                 ook Lorem Ipsum is simply dummy text of the printing</p>
+                 <a href="#">vew all products</a>
+                 </div>
+                 <div class="img-src">
+                    <img src="img/pepsi001.png" class="pepsi">
+                </div>
+        </div>
+        <div class="changecolor">
+            <li><img src="img/pepsi001.png" onclick="changecans('img/pepsi001.png');changebgcolor('#0062be')"></li>
+            <li><img src="img/pepsi002.png" onclick="changecans('img/pepsi002.png');changebgcolor('#e60c2c')"></li>
+            <li><img src="img/pepsi003.png" onclick="changecans('img/pepsi003.png');changebgcolor('#1e1e1e')"></li>
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+        function changecans(color) {
+        document.querySelector('.pepsi').src = color;
+}
+function changebgcolor(color) {
+
+    var scr = document.querySelector('.scr');
+    scr.style.background = color;
+}
+
+    var open = document.querySelector(".menu");
+    var close = document.querySelector(".close");
+    var nav = document.querySelector(".main-ul");
+    open.addEventListener("click",()=>{
+        open.style.display = "none"
+        close.style.display = "block"
+        nav.style.top = "0"
+    })
+    close.addEventListener("click",()=>{
+        close.style.display = "none"
+        open.style.display = "block"
+        nav.style.top = "-1000%"
+
+    })
+
+    </script>
+</body>
+</html>

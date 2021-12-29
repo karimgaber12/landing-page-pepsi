@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+}
+section{
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #0062be;
+    transition: ease-in-out all .3s;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    max-width: 80%;
+}
+.header .main-ul{
+    display: flex;
+    position: relative;
+}
+.header .main-ul li{
+    list-style: none;
+    margin: 0 15px;
+    position: relative;
+}
+.header .main-ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+}
+.header .main-ul  li a::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left:0;
+    background: #ffffff;
+    width: 100%;
+    height: 3px;
+    transform: scalex(0);
+    transform-origin: left;
+    transition: .5s;
+}
+.header .main-ul li a:hover::after{
+transform: scalex(1);
+transition: .5s;
+}
+.content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.content .contentbx{
+    max-width:70%;
+}
+.contentbx h1{
+    color: #fff;
+    font-weight: 800;
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.contentbx h1 span{
+    color: #fff;
+    font-weight: 800;
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+.contentbx p{
+    color: #fff;
+    font-size: 20px;
+}
+.contentbx a{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 15px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.changecolor{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.changecolor li{
+    width: 80px;
+    list-style: none;
+}
+.changecolor li img{
+    width: 50px;
+    height: 100px;
+    transition: all .4s;
+    cursor: pointer;
+}
+.changecolor li:hover img{
+    transform:translate(0px,-10px);
+    transition: all .4s;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+    visibility: hidden;
+
+}
+.close{
+    display: none;
+}
+
+/*responsive*/
+@media (max-width:1390px) {
+    .content .contentbx{
+        max-width:50%;
+    }
+    
+}
+@media (max-width:1080px) {
+    .content .contentbx{
+        max-width:100%;
+    }
+    .contentbx h1{
+        font-size: 2.5em;
+    }
+    .contentbx h1 span{
+        font-size: 2em;
+    }
+    .img-src{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-src img{
+        width: 50%;
+        margin-top: 30px;
+    }
+    .content{
+        justify-content: center;
+    }
+}
+@media (max-width:900px) {
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+    .menu{
+        cursor: pointer;
+        display: block;
+        visibility: visible;
+    }
+    .close{
+        display: none;
+        cursor: pointer;
+        z-index: 2;
+        filter: invert(1);
+
+    }
+    
+    .header .main-ul{
+        background-color: #fff;
+        position: absolute;
+        top: -1000%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all ease-in-out .4s;
+    }
+    .header .main-ul.active{
+        top: 0;
+        transition: all ease-in-out .4s;
+
+    }
+    .header .main-ul li{
+        margin-top: 20px;
+
+    }
+    .header .main-ul li a{
+        color: #111;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+
+}
+@media (max-width:750px) {
+    section{
+        padding: 10px;
+    }
+}
